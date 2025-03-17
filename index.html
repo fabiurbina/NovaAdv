@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form onsubmit="return validarLogin(event)">
+            <input type="text" id="usuario" placeholder="Usuário" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <script>
+        async function hashSenha(senha) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(senha);
+            const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+            return Array.from(new Uint8Array(hashBuffer))
+                .map(byte => byte.toString(16).padStart(2, "0"))
+                .join("");
+        }
+
+        async function validarLogin(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            const usuarioCorreto = "admin";
+            const senhaCorretaHash = "a6635b142c2c61db54e16d00a2892ddb653ad32b0ddaa99ee8a7746c108ad88d"; // Hash correto de "12345"
+
+            const usuarioDigitado = document.getElementById("usuario").value;
+            const senhaDigitada = document.getElementById("senha").value;
+            const senhaDigitadaHash = await hashSenha(senhaDigitada);
+
+            console.log("Hash digitado:", senhaDigitadaHash); // Para depuração
+
+            if (usuarioDigitado === usuarioCorreto && senhaDigitadaHash === senhaCorretaHash) {
+                alert("Login bem-sucedido!");
+                window.location.href = "https://app.powerbi.com/view?r=eyJrIjoiN2VkNWRmYmEtOTcyZi00N2ZlLWExNTEtMjI1OTJjYmE0ODZjIiwidCI6Ijc1ZWJlMzg5LTg1NzEtNGEwOC1iYmMyLWZjYjcyZmM0ODQ1MyJ9&embedImagePlaceholder=true"; // Redireciona para outra página
+            } else {
+                alert("Usuário ou senha incorretos! Tente novamente.");
+            }
+        }
+    </script>
+
+</body>
+</html>
