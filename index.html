@@ -106,19 +106,19 @@
             document.getElementById("dashboard").style.display = "block";
 
             const paginas = [
-                "https://app.powerbi.com/view?r=eyJrIjoiMDBiMzAwZTMtYmI0MS00MGE3LTlhNmUtOGUwYTkxZWYzNWY5IiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",#dash
-                "https://app.powerbi.com/view?r=eyJrIjoiYjMxZDZmMmQtNWFlOS00NDVmLWE1YWItMmE0ODdkYzRmNjZjIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",#controladoria
-                "https://app.powerbi.com/view?r=eyJrIjoiYjdkYzFlMzYtNTE5MC00ZDA0LTg0NWUtMGI4YTQ2YmQ1NGMwIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",#AME CIVEL E ESTRATEGICO
-                "https://app.powerbi.com/view?r=eyJrIjoiM2RmYzg4NTgtMjIzZC00ZWVkLWE4OWItMjNmN2UzOTYyOTM2IiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",#AME JEC
-                "https://app.powerbi.com/view?r=eyJrIjoiNWJkOTdmNDQtNWJkOC00YjEyLTgxM2UtYTNlYjBmZGEwY2M4IiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",#Estrategico nova servidor publico
-                "https://app.powerbi.com/view?r=eyJrIjoiNzFlZWVhODMtM2JmZC00MGMxLWE5MWItN2MxZmI3OGE5YjhhIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",#PROJETOS ESPECIAIS
-                "https://app.powerbi.com/view?r=eyJrIjoiNzNmY2M4ZWItODUzNi00ZDE4LWFkZTktNzRiYTFmYjg5NGYyIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",#Recuperação de credito nova
-                "https://app.powerbi.com/view?r=eyJrIjoiMzU5YTBkZmItOGUzMC00MzY0LTljYWQtOGNmNGVlNmFmMzBlIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",#PROTOCOLO
-                "https://app.powerbi.com/view?r=eyJrIjoiOTU3YTQ0ZmQtMGE3Yi00YzU0LWFlMjAtY2U2ZTg2MWUxMjg0IiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",#PRODUTIVIDADE
-                "https://app.powerbi.com/view?r=eyJrIjoiM2E0NDUxZWMtN2U5Ni00MWFiLTk1MTYtZDEwYmI4ZDIxNmZhIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",#GUIAS
-                "https://app.powerbi.com/view?r=eyJrIjoiZmY5NjM3ZjUtNWY2Zi00YzJjLWFiYjMtYzM1MzYwYzE0MzVhIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",#PEÇAS
-                "https://app.powerbi.com/view?r=eyJrIjoiYTFiZmUzMmQtYTgzZi00ODA0LWJkN2YtOGIzYjI2ZjJkNjYwIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",#PROCESSOS PARADOS
-                "https://app.powerbi.com/view?r=eyJrIjoiZmEwMDg3NDEtY2FhZi00NGU2LWJkZjktNDVmNzRhNjcwYTZkIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9"#Base nova
+                "https://app.powerbi.com/view?r=eyJrIjoiMDBiMzAwZTMtYmI0MS00MGE3LTlhNmUtOGUwYTkxZWYzNWY5IiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",<!--dash-->
+                "https://app.powerbi.com/view?r=eyJrIjoiYjMxZDZmMmQtNWFlOS00NDVmLWE1YWItMmE0ODdkYzRmNjZjIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",<!--controladoria-->
+                "https://app.powerbi.com/view?r=eyJrIjoiYjdkYzFlMzYtNTE5MC00ZDA0LTg0NWUtMGI4YTQ2YmQ1NGMwIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",<!--AME CIVEL E ESTRATEGICO-->
+                "https://app.powerbi.com/view?r=eyJrIjoiM2RmYzg4NTgtMjIzZC00ZWVkLWE4OWItMjNmN2UzOTYyOTM2IiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",<!--AME JEC-->
+                "https://app.powerbi.com/view?r=eyJrIjoiNWJkOTdmNDQtNWJkOC00YjEyLTgxM2UtYTNlYjBmZGEwY2M4IiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",<!--Estrategico nova servidor publico-->
+                "https://app.powerbi.com/view?r=eyJrIjoiNzFlZWVhODMtM2JmZC00MGMxLWE5MWItN2MxZmI3OGE5YjhhIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",<!--PROJETOS ESPECIAIS-->
+                "https://app.powerbi.com/view?r=eyJrIjoiNzNmY2M4ZWItODUzNi00ZDE4LWFkZTktNzRiYTFmYjg5NGYyIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",<!--Recuperação de credito nova-->
+                "https://app.powerbi.com/view?r=eyJrIjoiMzU5YTBkZmItOGUzMC00MzY0LTljYWQtOGNmNGVlNmFmMzBlIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",<!--PROTOCOLO-->
+                "https://app.powerbi.com/view?r=eyJrIjoiOTU3YTQ0ZmQtMGE3Yi00YzU0LWFlMjAtY2U2ZTg2MWUxMjg0IiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",<!--PRODUTIVIDADE-->
+                "https://app.powerbi.com/view?r=eyJrIjoiM2E0NDUxZWMtN2U5Ni00MWFiLTk1MTYtZDEwYmI4ZDIxNmZhIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",<!--GUIAS-->
+                "https://app.powerbi.com/view?r=eyJrIjoiZmY5NjM3ZjUtNWY2Zi00YzJjLWFiYjMtYzM1MzYwYzE0MzVhIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",<!--PEÇAS-->
+                "https://app.powerbi.com/view?r=eyJrIjoiYTFiZmUzMmQtYTgzZi00ODA0LWJkN2YtOGIzYjI2ZjJkNjYwIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9",<!--PROCESSOS PARADOS-->
+                "https://app.powerbi.com/view?r=eyJrIjoiZmEwMDg3NDEtY2FhZi00NGU2LWJkZjktNDVmNzRhNjcwYTZkIiwidCI6ImEyMTIxYTIxLWI3M2QtNDUwZS1iNzhiLTY0OWRlZGQyZDI4NiJ9"<!--Base nova-->
             ];
 
             let indice = 0;
@@ -150,5 +150,6 @@
 
 </body>
 </html> 
+
 
 
